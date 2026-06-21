@@ -1,0 +1,196 @@
+/* =========================
+   ОБЩИЕ СТИЛИ
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: #000;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: gold;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    padding: 15px 25px;
+    border: none;
+    background: gold;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* =========================
+   СЕКЦИИ
+========================= */
+
+.section {
+    padding: 80px 0;
+}
+
+.section h2 {
+    margin-bottom: 25px;
+}
+
+.dark {
+    background: #1b1b1b;
+}
+
+/* =========================
+   КАРТОЧКИ МИРОВ
+========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #292929;
+    padding: 25px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* =========================
+   ГАЛЕРЕЯ
+========================= */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* =========================
+   BOSS
+========================= */
+
+.boss {
+    text-align: center;
+    background: linear-gradient(#1a0000, #000);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: black;
+    text-align: center;
+    padding: 20px;
+}
+
+/* =========================
+   АДАПТИВНОСТЬ
+========================= */
+
+@media (max-width: 768px) {
+
+    header .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
